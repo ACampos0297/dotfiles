@@ -14,4 +14,3 @@ POWERLINE_BASH_SELECT=1
 . /usr/share/powerline/bindings/bash/powerline.sh
 
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
-neofetch

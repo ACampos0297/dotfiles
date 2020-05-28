@@ -791,8 +791,11 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 --run at autostart
+awful.spawn.with_shell("xrandr --output HDMI-1-2 --auto --left-of DP-4")
+--awful.spawn.with_shell("nvidia-settings --assign CurrentMetaMode='DP-4:nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}'")
 
 awful.spawn.with_shell("picom &")
+--awful.spawn.with_shell("xrandr --setprovideroutputsource 1 1")
 --[[
 awful.spawn(terminal.." --hold -e neofetch",{
         placement = awful.placement.bottom_right
