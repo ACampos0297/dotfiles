@@ -337,18 +337,18 @@ globalkeys = my_table.join(
 
     -- awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
     --           {description = "jump to urgent client", group = "client"}),
-    -- awful.key({ modkey,    "Shift"       }, "Tab",
-    --     function ()
-    --         if cycle_prev then
-    --             awful.client.focus.history.previous()
-    --         else
-    --             awful.client.focus.byidx(-1)
-    --         end
-    --         if client.focus then
-    --             client.focus:raise()
-    --         end
-    --     end,
-    --     {description = "cycle with previous/go back", group = "client"}),
+    awful.key({ modkey,    "Shift"       }, "Tab",
+        function ()
+            if cycle_prev then
+                awful.client.focus.history.previous()
+            else
+                awful.client.focus.byidx(-1)
+            end
+            if client.focus then
+                client.focus:raise()
+            end
+        end,
+        {description = "cycle with previous/go back", group = "client"}),
     awful.key({ modkey   }, "Tab",
         function ()
             if cycle_prev then
@@ -360,16 +360,16 @@ globalkeys = my_table.join(
         end,
         {description = "cycle with next/go forth", group = "client"}),
 
-    awful.key({ modkey, "Shift"   }, "Tab",
-        function ()
-            if cycle_prev then
-                awful.client.focus.byidx(-1)
-                if client.focus then
-                    client.focus:raise()
-                end
-            end
-        end,
-        {description = "cycle with go back", group = "client"}),
+    -- awful.key({ modkey, "Shift"   }, "Tab",
+    --     function ()
+    --         if cycle_prev then
+    --             awful.client.focus.byidx(-1)
+    --             if client.focus then
+    --                 client.focus:raise()
+    --             end
+    --         end
+    --     end,
+    --     {description = "cycle with go back", group = "client"}),
     -- Show/Hide Wibox
     awful.key({ modkey }, "b", function ()
             for s in screen do
