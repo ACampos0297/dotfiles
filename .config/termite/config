@@ -44,41 +44,53 @@ browser = lynx
 #cursor_foreground = #dcdccc
 
 [colors]
-foreground = #bbc5ff
-foreground_bold = #bbc5ff
-cursor = #bbc5ff
-# background transparency (requires a compositor)
-background = rgba(40, 42, 54, 0.95)
+# Base16 Outrun Dark
+# Author: Hugo Delahousse (http://github.com/hugodelahousse/)
 
-# if unset, will reverse foreground and background
-#highlight = #839496
+foreground          = #D0D0FA
+foreground_bold     = #D0D0FA
+cursor              = #D0D0FA
+cursor_foreground   = #00002A
+background          = rgba(0, 0, 0, 0.5)
 
-# colors from color0 to color254 can be set
-color0 = #101010
-color1 = #f07178
-color2 = #c3e88d
-color3 = #ffcb6b
-color4 = #82aaff
-color5 = #c792ea
-color6 = #89ddff
-color7 = #d0d0d0
-color8 = #434758
-color9 = #ff8b92
-color10 = #ddffa7
-color11 = #ffe585
-color12 = #9cc4ff
-color13 = #e1acff
-color14 = #a3f7ff
-color15 = #ffffff
+# 16 color space
 
-[hints]
-#foreground = #dcdccc
-#background = #3f3f3f
-#active_foreground = #e68080
-#active_background = #3f3f3f
-#padding = 2
-#border = #3f3f3f
-#border_width = 0.5
-#roundness = 2.0
+# Black, Gray, Silver, White
+color0  = #00002A
+color8  = #50507A
+color7  = #D0D0FA
+color15 = #F5F5FF
+
+# Red
+color1  = #FF4242
+color9  = #FF4242
+
+# Green
+color2  = #59F176
+color10 = #59F176
+
+# Yellow
+color3  = #F3E877
+color11 = #F3E877
+
+# Blue
+color4  = #66B0FF
+color12 = #66B0FF
+
+# Purple
+color5  = #F10596
+color13 = #F10596
+
+# Teal
+color6  = #0EF0F0
+color14 = #0EF0F0
+
+# Extra colors
+color16 = #FC8D28
+color17 = #F003EF
+color18 = #20204A
+color19 = #30305A
+color20 = #B0B0DA
+color21 = #E0E0FF
 
 # vim: ft=dosini cms=#%s
