@@ -813,21 +813,19 @@ end)
 -- }}}
 
 --run at autostart
---awful.spawn.with_shell("xrandr --output DP-4 --auto") 
---awful.spawn.with_shell("xrandr --output HDMI2 --auto --left-of DP-4")
---awful.spawn.with_shell("xrandr --output HDMI-0 --auto --left-of HDMI2")
-awful.spawn.with_shell("RIVAL")
---awful.spawn.with_shell("nvidia-settings --assign CurrentMetaMode='DP-4:nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}'")
-
-awful.spawn.with_shell("picom &")
---awful.spawn.with_shell("xrandr --setprovideroutputsource 1 1")
---[[
-awful.spawn(terminal.." --hold -e neofetch",{
-        placement = awful.placement.bottom_right
-})
 awful.spawn(terminal.." -e htop",{
-        placement = awful.placement.top_right
+        screen = 2,
+        placement = awful.placement.right
 })
+awful.spawn(terminal.." --hold -e neofetch",{
+        screen = 2,
+        placement = awful.placement.top_left
+})
+awful.spawn(terminal.." --hold -e arch",{
+        screen = 2,
+        placement = awful.placement.bottom_left
+})
+--[[
 awful.spawn(terminal,{
         placement = awful.placement.left
 })

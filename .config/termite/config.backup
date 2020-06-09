@@ -1,0 +1,96 @@
+[options]
+allow_bold = true
+#audible_bell = false
+clickable_url = true
+#dynamic_title = true
+#font = Mononoki Nerd Font 12
+#fullscreen = true
+geometry = 700x520
+icon_name = terminal
+#mouse_autohide = false
+#scroll_on_output = false
+#scroll_on_keystroke = true
+# Length of the scrollback buffer, 0 disabled the scrollback buffer
+# and setting it to a negative value means "infinite scrollback"
+scrollback_lines = 10000
+#search_wrap = true
+#urgent_on_bell = true
+
+# $BROWSER is used by default if set, with xdg-open as a fallback
+browser = lynx
+
+# "system", "on" or "off"
+#cursor_blink = system
+
+# "block", "underline" or "ibeam"
+#cursor_shape = block
+
+# Hide links that are no longer valid in url select overlay mode
+#filter_unmatched_urls = true
+
+# Emit escape sequences for extra modified keys
+#modify_other_keys = false
+
+# set size hints for the window
+#size_hints = false
+
+# "off", "left" or "right"
+#scrollbar = off
+
+[colors]
+# If both of these are unset, cursor falls back to the foreground color,
+# and cursor_foreground falls back to the background color.
+#cursor = #dcdccc
+#cursor_foreground = #dcdccc
+
+[colors]
+# Base16 Outrun Dark
+# Author: Hugo Delahousse (http://github.com/hugodelahousse/)
+
+foreground          = #D0D0FA
+foreground_bold     = #D0D0FA
+cursor              = #D0D0FA
+cursor_foreground   = #00002A
+background          = rgba(0, 0, 0, 0.6)
+
+# 16 color space
+
+# Black, Gray, Silver, White
+color0  = #00002A
+color8  = #50507A
+color7  = #D0D0FA
+color15 = #F5F5FF
+
+# Red
+color1  = #FF4242
+color9  = #FF4242
+
+# Green
+color2  = #59F176
+color10 = #59F176
+
+# Yellow
+color3  = #F3E877
+color11 = #F3E877
+
+# Blue
+color4  = #66B0FF
+color12 = #66B0FF
+
+# Purple
+color5  = #F10596
+color13 = #F10596
+
+# Teal
+color6  = #0EF0F0
+color14 = #0EF0F0
+
+# Extra colors
+color16 = #FC8D28
+color17 = #F003EF
+color18 = #20204A
+color19 = #30305A
+color20 = #B0B0DA
+color21 = #E0E0FF
+
+# vim: ft=dosini cms=#%s
