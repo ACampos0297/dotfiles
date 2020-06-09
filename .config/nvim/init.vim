@@ -46,3 +46,7 @@ highlight Function         ctermfg=1    ctermbg=none    cterm=none
 let g:airline_powerline_fonts=1
 let g:airline_theme='murmur'
 let g:python_hightlight_all=1
+
+
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>

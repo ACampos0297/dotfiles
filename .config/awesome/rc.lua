@@ -328,7 +328,7 @@ globalkeys = my_table.join(
     -- awful.key({ modkey, "Shift"   }, "k", function () awful.client.swap.byidx( -1)    end,
     --           {description = "swap with previous client by index", group = "client"}),
 
-    awful.key({ modkey, "Control" }, "Tab", function () awful.screen.focus_relative( 1) end,
+    awful.key({ modkey, "Control" }, "Tab", function () awful.screen.focus_relative( -1) end,
               {description = "focus the next screen", group = "screen"}),
     -- awful.key({ modkey, "Control" }, "k", function () awful.screen.focus_relative(-1) end,
     --           {description = "focus the previous screen", group = "screen"}),
@@ -717,9 +717,9 @@ awful.rules.rules = {
 
     -- Set Firefox to always map on the first tag on screen 1.
     { rule = { class = "Firefox" },
-      properties = { screen = 1, tag = awful.util.tagnames[1] } },
+      properties = { screen = 2, tag = awful.util.tagnames[1] } },
     { rule = { name = "ksnip" },
-        properties = { floating = true },
+        properties = {floating = true },
     },
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
@@ -813,7 +813,9 @@ end)
 -- }}}
 
 --run at autostart
-awful.spawn.with_shell("xrandr --output HDMI2 --auto --left-of DP-4")
+--awful.spawn.with_shell("xrandr --output DP-4 --auto") 
+--awful.spawn.with_shell("xrandr --output HDMI2 --auto --left-of DP-4")
+--awful.spawn.with_shell("xrandr --output HDMI-0 --auto --left-of HDMI2")
 awful.spawn.with_shell("RIVAL")
 --awful.spawn.with_shell("nvidia-settings --assign CurrentMetaMode='DP-4:nvidia-auto-select +1920+0 {ForceCompositionPipeline=On}'")
 
@@ -829,4 +831,4 @@ awful.spawn(terminal.." -e htop",{
 awful.spawn(terminal,{
         placement = awful.placement.left
 })
---]]
+]]--
