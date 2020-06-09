@@ -244,15 +244,13 @@ end)
 -- Create a wibox for each screen and add it
  awful.screen.connect_for_each_screen(function(s) beautiful.at_screen_connect(s) end)
 -- }}}
-
--- {{{ Mouse bindings
+--[[
 root.buttons(my_table.join(
     --awful.button({ }, 3, function () awful.util.mymainmenu:toggle() end),
     awful.button({ }, 4, awful.tag.viewnext),
     awful.button({ }, 5, awful.tag.viewprev)
 ))
--- }}}
-
+]]--
 -- {{{ Key bindings
 globalkeys = my_table.join(
     -- Take a screenshot
