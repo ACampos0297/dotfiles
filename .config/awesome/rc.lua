@@ -360,7 +360,7 @@ globalkeys = my_table.join(
             end
         end,
         {description = "go forth", group = "client"}),
-
+--[[
     -- Show/Hide Wibox
     awful.key({ modkey }, "b", function ()
             for s in screen do
@@ -371,7 +371,7 @@ globalkeys = my_table.join(
 	end
 end,
         {description = "toggle wibox", group = "awesome"}),
-
+	]]--
     -- On the fly useless gaps change
     awful.key({ altkey, "Control" }, "=", function () lain.util.useless_gaps_resize(1) end,
               {description = "increment useless gaps", group = "tag"}),
@@ -534,12 +534,12 @@ end,
               {description = "copy gtk to terminal", group = "hotkeys"}),
 --]]
     -- User programs
-    --[[
-    awful.key({ modkey }, "q", function () awful.spawn(browser) end,
+    awful.key({ modkey }, "b", function () awful.spawn(browser) end,
               {description = "run browser", group = "launcher"}),
+--[[	      
     awful.key({ modkey }, "a", function () awful.spawn(guieditor) end,
               {description = "run gui editor", group = "launcher"}),
---]]
+	      ]]--
     -- Default
     --[[ Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
@@ -706,7 +706,7 @@ awful.rules.rules = {
 
     -- Titlebars
     { rule_any = { type = { "dialog", "normal" } },
-      properties = { titlebars_enabled = true } },
+      properties = { titlebars_enabled = false } },
 
     -- Set Firefox to always map on the first tag on screen 1.
     { rule = { class = "Firefox" },
