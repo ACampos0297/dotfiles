@@ -369,6 +369,7 @@ globalkeys = my_table.join(
     --     end,
     --     {description = "cycle with go back", group = "client"}),
     -- Show/Hide Wibox
+    --[[
     awful.key({ modkey }, "b", function ()
             for s in screen do
                 s.mywibox.visible = not s.mywibox.visible
@@ -378,7 +379,7 @@ globalkeys = my_table.join(
             end
         end,
         {description = "toggle wibox", group = "awesome"}),
-
+        ]]--
     -- On the fly useless gaps change
     awful.key({ altkey, "Control" }, "=", function () lain.util.useless_gaps_resize(1) end,
               {description = "increment useless gaps", group = "tag"}),
@@ -541,12 +542,10 @@ globalkeys = my_table.join(
               {description = "copy gtk to terminal", group = "hotkeys"}),
 --]]
     -- User programs
-    --[[
-    awful.key({ modkey }, "q", function () awful.spawn(browser) end,
+    awful.key({ modkey }, "b", function () awful.spawn(browser) end,
               {description = "run browser", group = "launcher"}),
-    awful.key({ modkey }, "a", function () awful.spawn(guieditor) end,
-              {description = "run gui editor", group = "launcher"}),
---]]
+              
+    --awful.key({ modkey }, "a", function () awful.spawn(guieditor) end,
     -- Default
     --[[ Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
@@ -709,6 +708,7 @@ awful.rules.rules = {
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen,
                      --size_hints_honor = false
      }
+
     },
 
     -- Titlebars
@@ -718,6 +718,9 @@ awful.rules.rules = {
     -- Set Firefox to always map on the first tag on screen 1.
     { rule = { class = "Firefox" },
       properties = { screen = 1, tag = awful.util.tagnames[1] } },
+    { rule = { name = "ksnip" },
+        properties = { floating = true },
+    },
 
     { rule = { class = "Gimp", role = "gimp-image-window" },
           properties = { maximized = true } },
