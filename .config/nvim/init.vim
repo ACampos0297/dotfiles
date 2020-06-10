@@ -4,6 +4,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vifm/vifm.vim'
 "{{ Tim Pope Plugins }}
 Plug 'tpope/vim-surround'                          " Change surrounding marks
+Plug 'tpope/vim-fugitive'
 "{{ Syntax Highlighting and Colors }}
 Plug 'vim-python/python-syntax'                    " Python highlighting
 call plug#end()
@@ -13,6 +14,7 @@ set laststatus=2 		" always show status line
 set noshowmode 			"non-normal modes showing in powerline
 set clipboard=unnamedplus	"Allow copy/paste between vim and other programs
 set mouse=nicr
+set hls is
 
 " Text, tab, indent config
 set expandtab
@@ -46,7 +48,8 @@ highlight Function         ctermfg=1    ctermbg=none    cterm=none
 let g:airline_powerline_fonts=1
 let g:airline_theme='murmur'
 let g:python_hightlight_all=1
-
+let g:airline_section_c = '%f'
+let g:airline_section_b = '%< %{FugitiveStatusline()}%=%-14. '
 
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>

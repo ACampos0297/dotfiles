@@ -3,3 +3,5 @@
 	name = Abdul Campos
 [core]
 	editor = vim
+[pull]
+	rebase = false
