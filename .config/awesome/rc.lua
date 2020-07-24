@@ -568,6 +568,8 @@ globalkeys = my_table.join(
         {description = "show rofi", group = "launcher"}),
     --]]
     -- Prompt
+    awful.key({ modkey }, "l", function () awful.util.spawn("i3lock -c 000000 -e -f ") end,
+            {description = "lock screen", group = "awesome"}),
     awful.key({ modkey }, "r", function () awful.util.spawn("dmenu_run") end,
               {description = "run dmenu", group = "launcher"})--[[
     awful.key({ modkey }, "x",
@@ -805,18 +807,6 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 --run at autostart
-awful.spawn(terminal.." -e htop",{
-        screen = 2,
-        placement = awful.placement.right
-})
-awful.spawn(terminal.." --hold -e neofetch",{
-        screen = 2,
-        placement = awful.placement.top_left
-})
-awful.spawn(terminal.." --hold -e arch",{
-        screen = 2,
-        placement = awful.placement.bottom_left
-})
 --[[
 awful.spawn(terminal,{
         placement = awful.placement.left

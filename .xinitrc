@@ -1,5 +1,8 @@
 #!/bin/sh
-autorandr -l Desktop
+autorandr -c
 picom &
 RIVAL
-awesome
+xss-lock -- i3lock -c 000000 -e -f &
+awesome 
+
+
