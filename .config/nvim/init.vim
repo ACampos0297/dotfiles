@@ -2,9 +2,6 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vifm/vifm.vim'
-"{{ Tim Pope Plugins }}
-Plug 'tpope/vim-surround'                          " Change surrounding marks
-Plug 'tpope/vim-fugitive'
 "{{ Syntax Highlighting and Colors }}
 Plug 'vim-python/python-syntax'                    " Python highlighting
 call plug#end()
@@ -49,7 +46,6 @@ let g:airline_powerline_fonts=1
 let g:airline_theme='murmur'
 let g:python_hightlight_all=1
 let g:airline_section_c = '%f'
-let g:airline_section_b = '%< %{FugitiveStatusline()}%=%-14. '
 
 command W :execute ':silent w !sudo tee% > /dev/null' | :edit!
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>

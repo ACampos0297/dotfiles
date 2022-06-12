@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =1
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/abdulc/Documents/LouberthaApp/ComparableGrid/search'
+let g:netrw_dirhist_3='/home/abdulc/Documents/lily-mailbox'
+let g:netrw_dirhist_2='/home/abdulc/Documents/LouberthaApp/ComparableGrid/src/templates'
 let g:netrw_dirhist_1='/home/abdulc/Documents/RemoteNotify'

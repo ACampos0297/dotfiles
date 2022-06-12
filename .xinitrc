@@ -1,8 +1,6 @@
 #!/bin/sh
-autorandr -c
 picom &
-RIVAL
+udiskie &
+xbindkeys &
 xss-lock -- i3lock -c 000000 -e -f &
-exec awesome 
-
-
+exec awesome
