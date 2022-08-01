@@ -376,7 +376,7 @@ globalkeys = my_table.join(
             beautiful.volume.update()
         end,
         {description = "volume down", group = "hotkeys"}),
-    awful.key({modkey }, "F12", function () awful.spawn.with_shell("pavucontrol") end,
+    awful.key({modkey }, "F12", function () awful.spawn.with_shell("pavucontrol -t 3") end,
             {description = "launch pavucontrol", group = "hotkeys"}),
     -- Copy primary to clipboard (terminals to gtk)
     awful.key({ modkey }, "c", function () awful.spawn.with_shell("xsel | xsel -i -b") end,
