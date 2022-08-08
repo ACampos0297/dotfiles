@@ -1,3 +1,0 @@
-#!/bin/sh
-MOUSE=`xinput list | grep -i Steel | awk -F= '{print $2}' | awk '{print $1}' | awk 'BEGIN{ RS="" ; FS="\n" }{print $1}'`
-xinput set-prop $MOUSE 'libinput Accel Speed' -0.6
